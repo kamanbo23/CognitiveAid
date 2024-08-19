@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="tab-link" onclick="openTab(event, 'home')">Home</a></li>
+                <li><a href="#" class="tab-link" onclick="openTab(event, 'exercise')">Exercise</a></li>
+                <li><a href="#" class="tab-link" onclick="openTab(event, 'calculator')">Calculator</a></li>
+                <li><a href="#" class="tab-link" onclick="openTab(event, 'reminders')">Reminders</a></li>
+                <li><a href="#" class="tab-link" onclick="openTab(event, 'team')">Team's Efforts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="home" class="tab-content">
+            <h1 class="main-title">Welcome to the Cognitive Aid App</h1>
+            <div class="description">Your companion for wellness. Explore exercises, manage reminders, and use our calculator to support your journey.</div>
+            <div class="quote-box">"Everyone matters."</div>
+        </div>
+        
+        <div id="exercise" class="tab-content">
+            <h2 class="main-title">Exercise</h2>
+            <select id="body-part" onchange="showExercises()">
+                <option value="">Select Body Part</option>
+                <option value="arms">Arms</option>
+                <option value="legs">Legs</option>
+                <option value="back">Back</option>
+                <option value="shoulders">Shoulders</option>
+                <option value="core">Core</option>
+            </select>
+            <div id="exercises"></div>
+        </div>
+
+
+        <div id="calculator" class="tab-content">
+            <h2 class="main-title">Talking Calculator</h2>
+            <div class="calculator-container">
+                <input type="text" id="calculation" readonly placeholder="Enter calculation">
+                <input type="text" id="result" readonly placeholder="Result">
+                <div class="buttons">
+                    <button onclick="appendToCalculation('1')">1</button>
+                    <button onclick="appendToCalculation('2')">2</button>
+                    <button onclick="appendToCalculation('3')">3</button>
+                    <button onclick="appendToCalculation('+')">+</button>
+                    <button onclick="appendToCalculation('4')">4</button>
+                    <button onclick="appendToCalculation('5')">5</button>
+                    <button onclick="appendToCalculation('6')">6</button>
+                    <button onclick="appendToCalculation('-')">-</button>
+                    <button onclick="appendToCalculation('7')">7</button>
+                    <button onclick="appendToCalculation('8')">8</button>
+                    <button onclick="appendToCalculation('9')">9</button>
+                    <button onclick="appendToCalculation('*')">*</button>
+                    <button onclick="appendToCalculation('0')">0</button>
+                    <button onclick="appendToCalculation('.')">.</button>
+                    <button onclick="calculateResult()">=</button>
+                    <button onclick="clearCalculation()">C</button>
+                    <button onclick="startSpeechRecognition()">Speak</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="reminders" class="tab-content">
+            <h2 class="main-title">Reminders</h2>
+            <div class="reminder-form">
+                <input type="text" id="reminder-label" placeholder="Reminder Label">
+                <input type="datetime-local" id="reminder-datetime">
+                <button onclick="addReminder()">Add Reminder</button>
+            </div>
+            <ul id="reminders-list"></ul>
+        </div>
+
+
+        <div id="team" class="tab-content">
+            <h2 class="main-title">Team's Efforts</h2>
+            <div class="team-section">
+                <h3>Meet Our Team</h3>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Team Member 1">
+                        <p>Developer- Lokesh Kamanboina</p>
+                    </div>
+                    <div class="team-member">
+                        
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="efforts-section">
+                <h3>Our Efforts</h3>
+                <p>We are committed to developing tools that enhance the quality of life for seniors and individuals with cognitive disabilities. The developmental process began when Lokesh's neighbor who had raised him all his life was diagnosed with alzheimer's. As he forgot his daily routine, Lokesh sought to help and give back to the man who had help raise him. The reminders feature was the first feature in this applicaiton. This app was then used by people around the neighborhood suffering from memory loss. Lokesh took this rising popularity as a means to implement more features in order  help a larger range of neurodivergent individuals. This app is being integrated into camps that work with neurodivergent individuals or older members who desire aid.
+                  
+             </p>
+                <img src="https://via.placeholder.com/600x300" alt="Efforts">
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: #e7ecef;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background: #1b1b2f;
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+header nav ul li {
+    margin: 0 1.5em;
+}
+
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+header nav ul li a:hover {
+    color: #a3cef1;
+}
+
+
+main {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.tab-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2em;
+    position: relative;
+    display: none;
+}
+
+
+.tab-content.active {
+    display: block;
+}
+
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #3a3d98, #0f2027, #2c5364);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    z-index: -1;
+}
+
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.main-title {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    animation: titleAnimation 3s ease-out forwards;
+}
+
+
+@keyframes titleAnimation {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+
+.description {
+    margin: 2em auto;
+    max-width: 70%;
+    text-align: center;
+    color: #c3cfe2;
+    font-size: 1.2em;
+}
+
+
+.quote-box {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 3em;
+    animation: quoteAnimation 4s ease-out forwards;
+}
+
+
+@keyframes quoteAnimation {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Calculator Styles */
+.calculator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.calculator-container input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 80%;
+}
+
+
+.buttons button {
+    padding: 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background: #1b1b2f;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.buttons button:hover {
+    background: #3a3d98;
+}
+
+
+/* Reminders Styles */
+.reminder-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.reminder-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1em;
+}
+
+
+#reminders-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+#reminders-list li {
+    background: #2c5364;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* Exercise Section */
+#exercises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.exercise {
+    margin: 10px;
+}
+
+
+.exercise img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+/* Team Section */
+.team-section {
+    margin-bottom: 2em;
+}
+
+
+.team-member {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+
+.efforts-section {
+    text-align: center;
+}
